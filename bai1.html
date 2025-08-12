@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 1</title>
+</head>
+<body>
+<h1>Chuyển từ độ C sang độ F</h1>
+<label for="doC">Nhập độ C:</label>
+<input type="number" id="doC">
+<button onclick="chuyendoi()">Chuyển đổi</button>
+<p id="ketqua"></p>
+<script>
+    function chuyendoi(){
+        let a = parseInt(document.getElementById('doC').value);
+        if(a >= 0){
+            document.getElementById('ketqua').innerText = `Bằng ${(a*1.8)+32} độ F`;
+        }else {
+            document.getElementById('ketqua').innerText = `Bằng ${(a*1.8)+32} độ F`;
+        }
+    }
+</script>
+</body>
+</html>
