@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 10</title>
+</head>
+<body>
+<h1>Tính giá điện</h1>
+<label for="kwh">Nhập số điện tiêu thụ (kWh)</label>
+<input type="number" id="kwh">
+<button onclick="giadien()">Tính giá điện</button>
+<p id="ketqua"></p>
+<script>
+    function giadien(){
+        let a = parseInt(document.getElementById("kwh").value);
+        if (a>=0 && a<=50){
+            document.getElementById('ketqua').innerText = `Giá điện = ${a*1678}VND`
+        }else {
+            if(a>=51 && a<=100 ){
+                document.getElementById('ketqua').innerText = `Giá điện = ${a*1734}VND`
+            }else {
+                if(a>=101 && a<=200 ){
+                    document.getElementById('ketqua').innerText = `Giá điện = ${a*2014}VND`
+                }else {
+                    if(a>=201 ){
+                        document.getElementById('ketqua').innerText = `Giá điện = ${a*2536}VND`
+                }else {
+                        document.getElementById('ketqua').innerText = `Không hợp lệ`
+                    }
+                }
+            }
+        }
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 2</title>
+</head>
+<body>
+<h1>Chuyển đổi từ Mét sang Feet</h1>
+<label for="met">Nhập số mét:</label>
+<input type="number" id="met">
+<button onclick="chuyendoi()">Chuyển đổi</button>
+<p id="ketqua"></p>
+<script>
+    function chuyendoi(){
+        let a = parseInt(document.getElementById('met').value);
+        if(a >= 0){
+            document.getElementById('ketqua').innerText = `Bằng ${a*3.2808} Feet`;
+        } else {
+            document.getElementById('ketqua').innerText = 'Không hợp lệ'
+        }
+    }
+</script>
+</body>
+</html>

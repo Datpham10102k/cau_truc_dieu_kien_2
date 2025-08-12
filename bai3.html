@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 3</title>
+</head>
+<body>
+<h1>Tính diện tích hình vuông với giá trị cạnh bất kỳ</h1>
+<label for="canh">Nhập giá trị cạnh hình vuông</label>
+<input type="number" id="canh">
+<button onclick="dientich()">Tính diện tích</button>
+<p id="ketqua"></p>
+<script>
+    function dientich(){
+        let a = parseInt(document.getElementById('canh').value);
+        if (a > 0){
+            document.getElementById('ketqua').innerText = `Diện tích hình vuông là ${a*a} cm2`;
+        } else {
+            document.getElementById('ketqua').innerText = 'Không hợp lệ';
+        }
+    }
+</script>
+</body>
+</html>

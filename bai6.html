@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 6</title>
+</head>
+<body>
+<h1>Giải phương trình bậc nhất ax+b=0</h1>
+<label for="numbera">Nhập giá trị của a:</label>
+<input type="number" id="numbera">
+<label for="numberb">Nhập giá trị của b:</label>
+<input type="number" id="numberb">
+<button onclick="phuongtrinh()">Giải phương trình</button>
+<p id="ketqua"></p>
+<script>
+    function phuongtrinh(){
+        let a = parseInt(document.getElementById('numbera').value);
+        let b = parseInt(document.getElementById('numberb').value);
+        if (a!=0){
+            document.getElementById('ketqua').innerText = `Nghiệm của phương trình là = ${-b/a}`;
+        } else {
+            document.getElementById('ketqua').innerText = `Phương trình vô nghiệm`;
+        }
+    }
+</script>
+</body>
+</html>

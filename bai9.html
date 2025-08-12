@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 9</title>
+</head>
+<body>
+<h1>Kiểm tra 3 cạnh của 1 tam giác</h1>
+<label for="canh1">Nhập giá trị cạnh thứ nhất:</label>
+<input type="number" id="canh1">
+<label for="canh2">Nhập giá trị cạnh thứ hai:</label>
+<input type="number" id="canh2">
+<label for="canh3">Nhập giá trị cạnh thứ ba:</label>
+<input type="number" id="canh3">
+<button onclick="kiemtratamgiac()">Kiểm tra</button>
+<p id="ketqua"></p>
+<script>
+    function kiemtratamgiac(){
+        let a = parseInt(document.getElementById("canh1").value);
+        let b = parseInt(document.getElementById("canh2").value);
+        let c = parseInt(document.getElementById("canh3").value);
+        if (a>0 && b>0 && c>0 &&
+            a+b>c && b+c>a && a+c>b) {
+            document.getElementById("ketqua").innerText = 'Đây là 3 cạnh của 1 tam giác';
+        } else {
+            document.getElementById("ketqua").innerText = 'Đây không phải là 3 cạnh của 1 tam giác';
+                    }
+
+    }
+</script>
+</body>
+</html>
